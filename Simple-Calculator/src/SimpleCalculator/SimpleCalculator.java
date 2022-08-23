@@ -1,10 +1,9 @@
-package SimpleCalculator;
+//package SimpleCalculator;
 import java.util.Scanner;
 
 public class SimpleCalculator {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		System.out.println("Welcome user.");
 		System.out.println();
 		System.out.println("If you would like to add, enter 1.");
@@ -67,7 +66,8 @@ public class SimpleCalculator {
 			
 			System.out.print("The value is: ");
 			System.out.println(num5 * num6);
-			//System.out.println();
+			System.out.println();
+			System.out.println();
 		}
 
 		  
