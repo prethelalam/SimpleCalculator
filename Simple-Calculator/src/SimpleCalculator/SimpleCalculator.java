@@ -67,7 +67,7 @@ public class SimpleCalculator {
 			
 			System.out.print("The value is: ");
 			System.out.println(num5 * num6);
-			System.out.println();
+			//System.out.println();
 		}
 
 		  
