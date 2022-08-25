@@ -37,8 +37,8 @@ public class SimpleCalculator {
 			System.out.print("The sum is: ");
 			System.out.println(num1 + num2);
 			System.out.println();
-	}
-	
+		}
+
 		else if (option == 2) {
 			System.out.println("Enter the first number you would like to subtract from:");
 			Scanner scan3 = new Scanner(System.in);
