@@ -1,25 +1,26 @@
 //package SimpleCalculator; (include for eclipse but not VS code)
+import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class SimpleCalculator {
-	public static void main(String[] args) {
-		int f = 0;
-		for (int i =0; i <= 1000; i++){
-		
+	static void Calculator() {
+
 		System.out.println("Welcome user.");
 		System.out.println();
-		System.out.println("If you would like to add, enter 1.");
-		System.out.println("If you would like to subtract, enter 2.");
-		System.out.println("If you would like to multiply, enter 3.");
-		System.out.println("If you would like to divide, enter 4.");
-		System.out.println("If you would like to find the power of a number, enter 5.");
+		System.out.println("If you would like to add, press 1 and hit enter.");
+		System.out.println("If you would like to subtract, press 2 and hit enter.");
+		System.out.println("If you would like to multiply, press 3 and hit enter.");
+		System.out.println("If you would like to divide, press 4 and hit enter.");
+		System.out.println("If you would like to find the power of a number, press 5 and hit enter.");
+		System.out.println("If you would like to take the square root of a number, press 6 and hit enter.");
+		System.out.println("If you would like to convert a decimal to a percentage, press 7 and hit enter.");
 		System.out.println();
 		
 		Scanner sc = new Scanner(System.in);
 		String scanned = sc.nextLine();
 		int option = Integer.parseInt(scanned);
 		System.out.println();
-		
+
 		if (option == 1) {
 			System.out.println("Enter the first number you would like to add:");
 			Scanner scan1 = new Scanner(System.in);
@@ -37,6 +38,7 @@ public class SimpleCalculator {
 			System.out.println(num1 + num2);
 			System.out.println();
 	}
+	
 		else if (option == 2) {
 			System.out.println("Enter the first number you would like to subtract from:");
 			Scanner scan3 = new Scanner(System.in);
@@ -109,6 +111,37 @@ public class SimpleCalculator {
 			System.out.println(Math.pow(num9, num10));
 			System.out.println();
 		}
+
+		else if (option == 6){
+			System.out.println("Enter the number you would like to take the sqaure root of: ");
+			Scanner scan11 = new Scanner(System.in);
+			String root = scan11.nextLine();
+			Double num11 = Double.parseDouble(root);
+			System.out.println();
+
+			System.out.println("The value is: ");
+			System.out.println(Math.sqrt(num11));
+			System.out.println();
+		}
+
+		else if (option == 7){
+			System.out.println("Enter the decimal you would like to convert into a percentage");
+			Scanner scan12 = new Scanner(System.in);
+			String decimal = scan12.nextLine();
+			Double num12 = Double.parseDouble(decimal);
+			System.out.println();
+
+			NumberFormat PercentFormat = NumberFormat.getPercentInstance();
+			PercentFormat.setMinimumFractionDigits(2);
+
+			System.out.println("The percentage is: ");
+			System.out.println(PercentFormat.format(num12));
+			System.out.println();
+		}
 	}
+	public static void main(String[] args) {
+		while (true){
+		Calculator();
+		}
 }
 }
